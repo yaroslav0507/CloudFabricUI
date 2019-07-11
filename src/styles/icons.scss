@@ -1,0 +1,70 @@
+.icon{
+  &-grey {
+    fill: #606060
+  }
+
+  &-light-grey {
+    fill: #69818b
+  }
+
+  &-white {
+    fill: #fff;
+  }
+
+  &-primary {
+    fill: #00b0dc;
+  }
+
+  &-secondary {
+    fill: #003c71;
+  }
+
+  &-green {
+    fill: #55bd59;
+  }
+
+  &-red {
+    fill: #c23616;
+  }
+
+  &-pink {
+    fill: #ef7676;
+  }
+
+  &-yellow {
+    fill: #d4b408;
+  }
+
+  &-24 {
+    width: 24px;
+    height: 24px;
+  }
+
+  &-action {
+    visibility: hidden;
+    cursor: pointer;
+    margin-right: 10px;
+
+    &:hover {
+      opacity: .8
+    }
+  }
+
+  &-close-tab {
+    font-size: 16px !important;
+    margin-left: 10px;
+    fill: #6d6d6d !important;
+  }
+}
+
+.close-dialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  cursor: pointer;
+  opacity: .7;
+  &:hover {
+    opacity: 1;
+  }
+}
