@@ -71,7 +71,7 @@ export const LoginForm: React.FC<ILoginFormProps> = (props) => {
           </CenteredGridItem>
 
           <Grid item xs={12} sm={4}>
-            <NavLink to={'/'}>
+            <NavLink to={'/clients/create'}>
               <Button
                 fullWidth
                 variant="contained"

@@ -65,7 +65,7 @@ export const theme = createMuiTheme({
         maxHeight: '100%',
         borderRadius: '4px 0 0 4px',
         zIndex: 1,
-        padding: '0 8px',
+        padding: '0 17px',
         backgroundColor: '#E0E0E0'
       },
       positionStart: {
@@ -76,11 +76,19 @@ export const theme = createMuiTheme({
       root: {
         textTransform: 'none',
         padding: '8px 16px'
+      },
+      contained: {
+        boxShadow: 'none'
       }
     },
     MuiTypography: {
       body1: {
         color: '#fff'
+      },
+      h5: {
+        fontSize: 18,
+        fontWeight: 700,
+        color: themeColors.primary.main
       }
     },
     MuiListItem: {

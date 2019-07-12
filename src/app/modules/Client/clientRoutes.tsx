@@ -7,7 +7,7 @@ export const ClientRoutes = (
   <Fragment>
     <Route
       exact={true}
-      path="/dashboard/create-client"
+      path="/clients/create"
       component={CreateClient}
     />
   </Fragment>
