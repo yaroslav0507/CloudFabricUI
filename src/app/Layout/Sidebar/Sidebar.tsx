@@ -5,7 +5,8 @@ import { NestedList } from './NestedList/NestedList';
 import { SidebarListItem } from './SidebarListItem/SidebarListItem';
 import { sidebarStyles } from './sidebarStyles';
 import IconComputer from '../../../images/baseline-computer-24px.svg';
-
+import SidebarLogo from '../../../images/CloudFabric_LogoHorzWhite.svg';
+import styled from 'styled-components';
 const TOOLS_SECTION = 'TOOLS_SECTION';
 
 declare const process: any;
@@ -21,6 +22,10 @@ interface ISidebarState {
 }
 
 const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+const SidebarLogoWrapper = styled.div`
+  padding: 20px;
+`;
 
 export const SidebarBase: React.FC<ISidebarProps> = (props) => {
   const [openedSection, setOpenedSection] = useState('');
@@ -50,6 +55,9 @@ export const SidebarBase: React.FC<ISidebarProps> = (props) => {
 
   const SidebarContent = (
     <Fragment>
+      <SidebarLogoWrapper>
+        <SidebarLogo />
+      </SidebarLogoWrapper>
       {ClientsSection}
     </Fragment>
   );

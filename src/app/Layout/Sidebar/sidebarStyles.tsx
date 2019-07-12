@@ -1,7 +1,7 @@
 import createStyles from '@material-ui/core/styles/createStyles';
 import { Theme } from '@material-ui/core';
 
-export const DRAWER_WIDTH = 310;
+export const DRAWER_WIDTH = 320;
 
 export const sidebarStyles = (theme: Theme) => createStyles({
   drawerPaper: {

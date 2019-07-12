@@ -71,13 +71,15 @@ export const LoginForm: React.FC<ILoginFormProps> = (props) => {
           </CenteredGridItem>
 
           <Grid item xs={12} sm={4}>
-            <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-            >
-              Sign In
-            </Button>
+            <NavLink to={'/'}>
+              <Button
+                fullWidth
+                variant="contained"
+                color="primary"
+              >
+                Sign In
+              </Button>
+            </NavLink>
           </Grid>
         </Grid>
       )}
