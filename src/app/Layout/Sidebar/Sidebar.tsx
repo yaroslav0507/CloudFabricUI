@@ -7,7 +7,7 @@ import { sidebarStyles } from './sidebarStyles';
 import IconComputer from '../../../images/baseline-computer-24px.svg';
 import SidebarLogo from '../../../images/CloudFabric_LogoHorzWhite.svg';
 import styled from 'styled-components';
-const TOOLS_SECTION = 'TOOLS_SECTION';
+const CLIENTS_SECTION = 'CLIENTS_SECTION';
 
 declare const process: any;
 
@@ -24,11 +24,16 @@ interface ISidebarState {
 const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 const SidebarLogoWrapper = styled.div`
-  padding: 20px;
+  padding: 11px 56px 10px 15px;
+  background-color: #474747;
+`;
+
+const NestedListWrapper = styled.div`
+  padding: 12px 5px;
 `;
 
 export const SidebarBase: React.FC<ISidebarProps> = (props) => {
-  const [openedSection, setOpenedSection] = useState('');
+  const [openedSection, setOpenedSection] = useState(CLIENTS_SECTION);
 
   const onItemSelected = () => {
     if (!props.isDesktop) {
@@ -39,18 +44,44 @@ export const SidebarBase: React.FC<ISidebarProps> = (props) => {
   const {classes, open, isDesktop} = props;
 
   const ClientsSection = (
-    <NestedList
-      open
-      title="Clients"
-      handleSectionClick={() => setOpenedSection(TOOLS_SECTION)}
-    >
-      <SidebarListItem
-        onClick={() => onItemSelected()}
-        to="/clients/create-new"
-        title="KLWines"
-        icon={<IconComputer className="icon-white"/>}
-      />
-    </NestedList>
+    <NestedListWrapper>
+      <NestedList
+        open={openedSection === CLIENTS_SECTION}
+        title="Clients"
+        handleSectionClick={() => setOpenedSection(openedSection === CLIENTS_SECTION ? '' : CLIENTS_SECTION)}
+      >
+        <SidebarListItem
+          onClick={() => onItemSelected()}
+          to="/clients/kl-wines"
+          title="KLWines"
+          icon={<IconComputer className="icon-white"/>}
+        />
+        <SidebarListItem
+          onClick={() => onItemSelected()}
+          to="/clients/approve-engine"
+          title="ApproveEngine"
+          icon={<IconComputer className="icon-white"/>}
+        />
+        <SidebarListItem
+          onClick={() => onItemSelected()}
+          to="/clients/car-finance"
+          title="CarFinance"
+          icon={<IconComputer className="icon-white"/>}
+        />
+        <SidebarListItem
+          onClick={() => onItemSelected()}
+          to="/clients/simon-med"
+          title="SimonMed"
+          icon={<IconComputer className="icon-white"/>}
+        />
+        <SidebarListItem
+          onClick={() => onItemSelected()}
+          to="/clients/cu-auctions"
+          title="CUAuctions"
+          icon={<IconComputer className="icon-white"/>}
+        />
+      </NestedList>
+    </NestedListWrapper>
   );
 
   const SidebarContent = (

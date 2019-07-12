@@ -17,7 +17,7 @@ export const sidebarListItemStyles = (theme: Theme) => createStyles({
     }
   },
   icon: {
-    marginLeft: '10px'
+    marginLeft: '20px'
   },
   text: {
     color: '#fff'

@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { ListItem, ListItemIcon, ListItemText, Collapse, withStyles, WithStyles } from '@material-ui/core';
 import IconExpandMore from '@material-ui/icons/ExpandMore';
 import {nestedListStyles} from './nestedListStyles';
+import styled from 'styled-components';
 
 interface INestedListProps extends WithStyles<typeof nestedListStyles> {
   title: string;
@@ -10,6 +11,12 @@ interface INestedListProps extends WithStyles<typeof nestedListStyles> {
   children?: any;
   handleSectionClick(): void;
 }
+
+const StyledListItemText = styled(ListItemText)`
+  && {
+    font-size: 18px;
+  }
+`;
 
 export const NestedListBase: React.FC<INestedListProps> = ({classes, ...props}) => {
   return (
@@ -21,7 +28,7 @@ export const NestedListBase: React.FC<INestedListProps> = ({classes, ...props}) 
         disableGutters
         classes={{root: classes.listItem}}
       >
-        <ListItemText primary={props.title} />
+        <StyledListItemText primary={props.title} />
 
         <ListItemIcon>
           <IconExpandMore

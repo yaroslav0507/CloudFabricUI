@@ -82,6 +82,22 @@ export const theme = createMuiTheme({
       body1: {
         color: '#fff'
       }
+    },
+    MuiListItem: {
+      dense: {
+        paddingTop: 12,
+        paddingBottom: 12,
+      }
+    },
+    MuiListItemIcon: {
+      root: {
+        marginRight: 0
+      }
+    },
+    MuiListItemText: {
+      root: {
+        padding: '0 8px'
+      }
     }
   }
 });

@@ -11,7 +11,7 @@ export const nestedListStyles = (theme: Theme) => createStyles({
     paddingLeft: 20
   },
   listItem: {
-    padding: '10px 7px 6px 20px',
+    padding: '9px 7px 8px 20px',
     height: 40
   },
   iconArrow: {
