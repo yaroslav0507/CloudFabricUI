@@ -3,6 +3,7 @@ import ImageCloud from '../../../images/Cloud.svg';
 import styled from 'styled-components';
 import {Button, Grid, Typography} from '@material-ui/core';
 import {TextInput} from '../../shared/inputs/TextInput/TextInput';
+import {FormWrapper} from '../../shared/components/components';
 
 const FirstCloud = styled(ImageCloud)`
   position: absolute;
@@ -17,10 +18,6 @@ const SecondCloud = styled(ImageCloud)`
 `;
 
 const CreateClientForm = styled.div`
-  padding: 28px 40px 40px;
-  border: 1px solid #E3E5E5;
-  background-color: #F8F8F8;
-  border-radius: 4px;
   position: absolute;
   max-width: 100%;
   width: 620px;
@@ -32,10 +29,11 @@ const CreateClientForm = styled.div`
   right: 0;
 `;
 
-const FormWrapper = styled.div`
+const FormContainer = styled.div`
   display: flex;
   margin-top: 10px;
 `;
+
 export const CreateClient: React.FC = () => {
   const [clientName, setClientName] = useState('');
 
@@ -44,32 +42,33 @@ export const CreateClient: React.FC = () => {
       <FirstCloud/>
       <SecondCloud/>
       <CreateClientForm>
-        <Typography variant="headline">
-          Create a New Client
-        </Typography>
-
         <FormWrapper>
-          <Grid container spacing={16}>
-            <Grid item xs={12} sm={10}>
-              <TextInput
-                value={clientName}
-                adornment="Name: "
-                onChange={({target: {value}}) => setClientName(value)}
-              />
-            </Grid>
+          <Typography variant="headline">
+            Create a New Client
+          </Typography>
 
-            <Grid item xs={12} sm={2}>
-              <Button
-                disabled={!clientName}
-                color="primary"
-                variant="contained"
-                fullWidth
-              >
-                Add
-              </Button>
-            </Grid>
-          </Grid>
+          <FormContainer>
+            <Grid container spacing={16}>
+              <Grid item xs={12} sm={10}>
+                <TextInput
+                  value={clientName}
+                  adornment="Name: "
+                  onChange={({target: {value}}) => setClientName(value)}
+                />
+              </Grid>
 
+              <Grid item xs={12} sm={2}>
+                <Button
+                  disabled={!clientName}
+                  color="primary"
+                  variant="contained"
+                  fullWidth
+                >
+                  Add
+                </Button>
+              </Grid>
+            </Grid>
+          </FormContainer>
         </FormWrapper>
       </CreateClientForm>
     </div>

@@ -29,7 +29,7 @@ const SidebarLogoWrapper = styled.div`
 `;
 
 const NestedListWrapper = styled.div`
-  padding: 12px 5px;
+  padding: 12px 0;
 `;
 
 export const SidebarBase: React.FC<ISidebarProps> = (props) => {
@@ -52,31 +52,31 @@ export const SidebarBase: React.FC<ISidebarProps> = (props) => {
       >
         <SidebarListItem
           onClick={() => onItemSelected()}
-          to="/clients/kl-wines"
+          to="/clients/client/KLWines"
           title="KLWines"
           icon={<IconComputer className="icon-white"/>}
         />
         <SidebarListItem
           onClick={() => onItemSelected()}
-          to="/clients/approve-engine"
+          to="/clients/client/ApproveEngine"
           title="ApproveEngine"
           icon={<IconComputer className="icon-white"/>}
         />
         <SidebarListItem
           onClick={() => onItemSelected()}
-          to="/clients/car-finance"
+          to="/clients/client/CarFinance"
           title="CarFinance"
           icon={<IconComputer className="icon-white"/>}
         />
         <SidebarListItem
           onClick={() => onItemSelected()}
-          to="/clients/simon-med"
+          to="/clients/client/SimonMed"
           title="SimonMed"
           icon={<IconComputer className="icon-white"/>}
         />
         <SidebarListItem
           onClick={() => onItemSelected()}
-          to="/clients/cu-auctions"
+          to="/clients/client/CUAuctions"
           title="CUAuctions"
           icon={<IconComputer className="icon-white"/>}
         />

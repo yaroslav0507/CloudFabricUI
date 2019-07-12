@@ -5,16 +5,6 @@ export const sidebarListItemStyles = (theme: Theme) => createStyles({
   root: {
     position: 'relative',
     fontSize: 13,
-    color: '#fff',
-
-    '&:before': {
-      content: '""',
-      display: 'block',
-      position: 'absolute',
-      left: 0,
-      width: 10,
-      height: '100%'
-    }
   },
   icon: {
     marginLeft: '20px'
@@ -24,8 +14,7 @@ export const sidebarListItemStyles = (theme: Theme) => createStyles({
   },
   active: {
     '& > div': {
-      background: '#004e82',
-      // background: theme.palette.secondary.light,
+      background: '#333232',
 
       '&:hover': {
         backgroundColor: theme.palette.secondary.dark

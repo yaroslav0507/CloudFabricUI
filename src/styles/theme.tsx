@@ -79,6 +79,9 @@ export const theme = createMuiTheme({
       },
       contained: {
         boxShadow: 'none'
+      },
+      containedSecondary: {
+        backgroundColor: themeColors.secondaryLight
       }
     },
     MuiTypography: {
@@ -95,6 +98,8 @@ export const theme = createMuiTheme({
       dense: {
         paddingTop: 12,
         paddingBottom: 12,
+        paddingLeft: 5,
+        paddingRight: 5,
       }
     },
     MuiListItemIcon: {

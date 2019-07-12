@@ -22,7 +22,7 @@ export const layoutStyles = (theme: Theme) => createStyles({
     position: 'relative',
     flexGrow: 1,
     backgroundColor: '#fff',
-    padding: `48px ${theme.spacing.unit}px 30px`,
+    padding: `24px 32px`,
     paddingBottom: 20,
     overflowY: 'auto',
     transition: theme.transitions.create('margin', {
@@ -30,8 +30,8 @@ export const layoutStyles = (theme: Theme) => createStyles({
       duration: theme.transitions.duration.leavingScreen,
     }),
     [theme.breakpoints.up('sm')]: {
-      paddingLeft: theme.spacing.unit * 3,
-      paddingRight: theme.spacing.unit * 3,
+      paddingLeft: 32,
+      paddingRight: 32,
     },
     display: 'flex',
     flexDirection: 'column',
