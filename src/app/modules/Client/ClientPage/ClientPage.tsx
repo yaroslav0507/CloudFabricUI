@@ -4,6 +4,9 @@ import {RouteComponentProps} from 'react-router';
 import styled from 'styled-components';
 import {FormWrapper} from '../../../shared/components/components';
 import {TextInput} from '../../../shared/inputs/TextInput/TextInput';
+import {CFGrid} from '../../../shared/CFGrid/CFGrid';
+import IconGear from '../../../../images/outline-settings-24px.svg';
+import {LabelWithIcon} from '../../../shared/components/LabelWithIcon';
 
 const PageHeader = styled.div`
   width: 100%;
@@ -18,6 +21,10 @@ const FormBlockHeader = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
+`;
+
+const AddNewVariableWrapper = styled(FormWrapper)`
+  margin-bottom: 29px;
 `;
 
 export const ClientPage: React.FC<RouteComponentProps<{clientName: string}>> = ({ match }) => {
@@ -39,7 +46,7 @@ export const ClientPage: React.FC<RouteComponentProps<{clientName: string}>> = (
         </Button>
       </PageHeader>
 
-      <FormWrapper>
+      <AddNewVariableWrapper>
         <Grid container spacing={16}>
           <Grid item xs>
             <FormBlockHeader>New Variable</FormBlockHeader>
@@ -72,7 +79,21 @@ export const ClientPage: React.FC<RouteComponentProps<{clientName: string}>> = (
             </Button>
           </Grid>
         </Grid>
-      </FormWrapper>
+      </AddNewVariableWrapper>
+
+      <CFGrid
+        config={[{
+          label: <LabelWithIcon label="Name" />,
+          render: (row) => <LabelWithIcon label={row.name} icon={<IconGear/>}/>
+        }, {
+          label: 'Value',
+          key: 'value'
+        }]}
+        data={[{
+          name: 'Variable Name',
+          value: 'Variable Value'
+        }]}
+      />
     </>
   );
 };

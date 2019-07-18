@@ -111,6 +111,51 @@ export const theme = createMuiTheme({
       root: {
         padding: '0 8px'
       }
-    }
+    },
+    MuiTable: {
+      root: {
+        border: '1px solid #E3E5E5',
+        borderRadius: 4
+      }
+    },
+    MuiTableRow: {
+      head: {
+        height: 40
+      },
+      root: {
+        height: 40
+      },
+      hover: {
+        '&:hover': {
+          backgroundColor: '#d9f1fb!important'
+        }
+      }
+    },
+    MuiTableCell: {
+      root: {
+        padding: '4px 5px 4px 0',
+        '&:first-child': {
+          paddingLeft: 15
+        }
+      },
+      head: {
+        color: '#000',
+        fontWeight: 700,
+        backgroundColor: '#f8f8f8',
+        position: 'sticky',
+        top: 0,
+        zIndex: 1,
+        '&:first-child': {
+          borderTopLeftRadius: 4
+        },
+        '&:last-child': {
+          borderTopRightRadius: 4
+        }
+      },
+      paddingDense: {
+        paddingRight: 5,
+        paddingLeft: 0
+      }
+    },
   }
 });
