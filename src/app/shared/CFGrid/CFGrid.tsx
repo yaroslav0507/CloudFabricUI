@@ -31,8 +31,8 @@ export const CFGrid: React.FC<IXTableProps<any>> = (props) => {
       </CFGridHead>
 
       <TableBody>
-        {props.data.map(row => (
-          <TableRow>
+        {props.data.map((row, index) => (
+          <TableRow key={index}>
             {props.config.map(config => (
               <TableCell>
                 {

@@ -50,7 +50,9 @@ export const theme = createMuiTheme({
       },
       input: {
         zIndex: 1,
-        padding: 0
+        padding: 0,
+        border: '1px solid #E0E0E0',
+        borderLeft: 'none'
       },
       inputAdornedStart: {
         paddingLeft: 8,
@@ -112,18 +114,12 @@ export const theme = createMuiTheme({
         padding: '0 8px'
       }
     },
-    MuiTable: {
-      root: {
-        border: '1px solid #E3E5E5',
-        borderRadius: 4
-      }
-    },
     MuiTableRow: {
       head: {
-        height: 40
+        height: 40,
       },
       root: {
-        height: 40
+        height: 40,
       },
       hover: {
         '&:hover': {
@@ -135,7 +131,15 @@ export const theme = createMuiTheme({
       root: {
         padding: '4px 5px 4px 0',
         '&:first-child': {
-          paddingLeft: 15
+          paddingLeft: 15,
+          borderTop: '1px solid #E3E5E5',
+          borderLeft: '1px solid #E3E5E5',
+          borderTopLeftRadius: 4
+        },
+        '&:last-child': {
+          paddingLeft: 15,
+          borderTop: '1px solid #E3E5E5',
+          borderRight: '1px solid #E3E5E5',
         }
       },
       head: {
